@@ -19,7 +19,7 @@ public class Main {
                     if (preciousChoice3 == 1) {
                         System.out.println("Average domestic height is about 25sm");
                         result = yourHeight / 0.25;
-                        System.out.println("So I guess you are about " + result + " little puffy cats tall");
+                        System.out.println("So I guess you are about " + String.format("%.2f", result)+ " little puffy cats tall");
                         System.out.println("Do you wanna continue having fun: ");
                         preciousChoice2 = in.next();
                         if (preciousChoice2.equals("y")) {
@@ -34,7 +34,7 @@ public class Main {
                     } else if (preciousChoice3 == 2) {
                         System.out.println("Average Puma height is 60-75");
                         result = yourHeight / 0.675;
-                        System.out.println("So I guess you are about " + result + " scary pumas tall");
+                        System.out.println("So I guess you are about " + String.format("%.2f", result) + " scary pumas tall");
                         System.out.println("Do you wanna continue having fun: ");
                         preciousChoice2 = in.next();
                         if (preciousChoice2.equals("y")) {
@@ -57,7 +57,7 @@ public class Main {
                     if (preciousChoice2.equals("lion")) {
                         System.out.println("Average lion height is 90-110");
                         result = yourHeight;
-                        System.out.println("So I guess you are about " + result + " little puffy cats tall");
+                        System.out.println("So I guess you are about " + String.format("%.2f", result) + " little puffy cats tall");
                         System.out.println("Do you wanna continue having fun: ");
                         preciousChoice2 = in.next();
                         if (preciousChoice2.equals("y")) {
@@ -69,7 +69,7 @@ public class Main {
                         } else if (preciousChoice2.equals("tiger")) {
                             System.out.println("Average tiger height is 80-110");
                             result = yourHeight / 0.95;
-                            System.out.println("So I guess you are about " + result + " little puffy cats tall");
+                            System.out.println("So I guess you are about " + String.format("%.2f", result) + " little puffy cats tall");
                             System.out.println("Do you wanna continue having fun: ");
                             preciousChoice2 = in.next();
                             if (preciousChoice2.equals("y")) {
@@ -82,6 +82,10 @@ public class Main {
                             }
                         }
                     }
+                } else if (preciousChoice3==2) {
+                    System.out.println("lets see");
+                    break;
+
                 }
             } else if (preciousChoice == 3) {
 
@@ -91,6 +95,7 @@ public class Main {
                 System.out.println("Press enter to continue");
                 try {
 
+                    //noinspection ResultOfMethodCallIgnored
                     System.in.read();
                 } catch (Exception e) {
                     throw new RuntimeException(e);
