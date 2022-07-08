@@ -14,8 +14,9 @@ public class Main {
         double yourHeight = 1.65;
         double result;
         int exitCounter = 0;
+        int helpCounter = 0;
         while (true) {
-            if (preciousChoice == 1) {
+            if (preciousChoice == 1 && helpCounter > 0) {
                 System.out.println("Choose: \n1:Genus Felis (domestic cat)\n2:Genus Puma\n3:Back");
                 validateInput(in, "[123]", "Please try harder next time(123): ");
                 preciousChoice3 = in.nextInt();
@@ -32,7 +33,8 @@ public class Main {
                 } else if (preciousChoice3 == 3) {
                     preciousChoice = getPreciousChoice("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit\n ", in);
                 }
-            } else if (preciousChoice == 2) {
+            } else if (preciousChoice == 2 && helpCounter > 0) {
+                System.out.println("====================================================================================");
                 System.out.println("Choose big cat family: \n1:Genus Panthera (big, or roaring, cats)\n2:Some of the rest I taught are graceful as you\n3:Back");
                 validateInput(in, "[123]", "A different error message everywhere,I am starting to defunnyfy(new word :D)(123): ");
                 yetAnotherPreciousChoice = in.nextInt();
@@ -45,12 +47,16 @@ public class Main {
                             result = yourHeight;
                             System.out.println("So I guess you are about " + String.format("%.2f", result) + " big hungry cats tall");
                             enterToContinue();
+                            preciousChoice = getPreciousChoice("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit\n ", in);
+                            continue;
                         }
                         case "tiger" -> {
                             System.out.println("Average tiger height is 80-110");
                             result = yourHeight / 0.95;
                             System.out.println("So I guess you are about " + String.format("%.2f", result) + " great striped cats tall");
                             enterToContinue();
+                            preciousChoice = getPreciousChoice("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit\n ", in);
+                            continue;
                         }
                         case "LEO" -> {
                             result = yourHeight / 1.77;
@@ -82,12 +88,20 @@ public class Main {
                     preciousChoice = getPreciousChoice("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit\n ", in);
                 }
             } else if (preciousChoice == 3) {
-
+                System.out.println("====================================================================================");
+                if(helpCounter>0){
+                System.out.println("I guess you need more help than I thought\nI will spell it out for you, LEO is the answer");
+                enterToContinue();
+                    preciousChoice = getPreciousChoice("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit ", in);
+                continue;
+                }
+                helpCounter++;
                 System.out.println("\n1:The Felinae are a subfamily of the family Felidae. This subfamily comprises the small cats having a bony hyoid, because of which they are able to purr but not roar.\nYou are small :D but you can definitely ROAR.");
                 System.out.println("2:The Pantherinae subfamily belongs to the lineage Panthera with five species of the genus Panthera: lion, tiger, leopard, jaguar, and snow leopard, and two species\n of the genus Neofelis: Indochinese clouded leopard and Sunda clouded leopard.\nHere come the big guns, but you are bigger...in a way :D");
                 enterToContinue();
                 preciousChoice = getPreciousChoice("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit ", in);
-            } else if (preciousChoice == 4) {
+            } else if (preciousChoice == 4 && helpCounter > 0) {
+                System.out.println("====================================================================================");
                 exitCounter++;
                 switch (exitCounter) {
                     case 1 -> {
@@ -144,6 +158,11 @@ public class Main {
                 break;
 
 
+            } else {
+                System.out.println("====================================================================================");
+                System.out.println("Wait wait go to help first, you will need it :D");
+                enterToContinue();
+                preciousChoice = getPreciousChoice("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit ", in);
             }
         }
     }
@@ -170,6 +189,9 @@ public class Main {
     private static int getPreciousChoice(String s, Scanner in) {
 
         System.out.print(s);
+
+        System.out.println("\n==========================================================================================");
+        validateInput(in, "[1234]", "Who do you think I am(1234): ");
         return in.nextInt();
     }
 
