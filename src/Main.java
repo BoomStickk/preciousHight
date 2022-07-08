@@ -6,11 +6,11 @@ public class Main {
         System.out.print("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit\n ");
         int preciousChoice = in.nextInt();
         String preciousChoice2;
+        String preciousChoiceYN;
         int preciousChoice3;
         int yetAnotherPreciousChoice;
         double yourHeight = 1.65;
         double result;
-        int counter1 = 0;
         int exitCounter = 0;
         while (true) {
             if (preciousChoice == 1) {
@@ -20,13 +20,12 @@ public class Main {
                     System.out.println("Average domestic height is about 25sm");
                     result = yourHeight / 0.25;
                     System.out.println("So I guess you are about " + String.format("%.2f", result) + " little puffy cats tall");
-                    counter1++;
                     System.out.println("Do you wanna continue having fun: ");
-                    preciousChoice2 = in.next();
-                    if (preciousChoice2.equals("y")) {
+                    preciousChoiceYN = in.next();
+                    if (preciousChoiceYN.equals("y")) {
                         System.out.println("OK than");
                         continue;
-                    } else if (preciousChoice2.equals("n")) {
+                    } else if (preciousChoiceYN.equals("n")) {
                         System.out.println("Did you already see all the stupid stuff I did K than bye later");
                         break;
                     }
@@ -36,10 +35,10 @@ public class Main {
                     result = yourHeight / 0.675;
                     System.out.println("So I guess you are about " + String.format("%.2f", result) + " scary pumas tall");
                     System.out.println("Do you wanna continue having fun: ");
-                    preciousChoice2 = in.next();
-                    if (preciousChoice2.equals("y")) {
+                    preciousChoiceYN = in.next();
+                    if (preciousChoiceYN.equals("y")) {
 
-                    } else if (preciousChoice2.equals("n")) {
+                    } else if (preciousChoiceYN.equals("n")) {
                         System.out.println("Did you already see all the stupid stuff I did K than bye later");
                         break;
                     }
@@ -51,32 +50,37 @@ public class Main {
                 System.out.println("Choose big cat family: \n1:Genus Panthera (big, or roaring, cats)\n2:Some of the rest I taught are graceful as you\n3:Back");
                 yetAnotherPreciousChoice = in.nextInt();
                 if (yetAnotherPreciousChoice == 1) {
-                    System.out.println("Just choose tiger or lion, thought I envision you as more of a lioness :D");
+                    System.out.println("Just choose tiger or lion, thought I envision you as more of a lioness :D, after all you are a LEO right");
                     preciousChoice2 = in.next();
                     if (preciousChoice2.equals("lion")) {
                         System.out.println("Average lion height is 90-110");
                         result = yourHeight;
-                        System.out.println("So I guess you are about " + String.format("%.2f", result) + " little puffy cats tall");
+                        System.out.println("So I guess you are about " + String.format("%.2f", result) + " big hungry cats tall");
                         System.out.println("Do you wanna continue having fun: ");
-                        preciousChoice2 = in.next();
-                        if (preciousChoice2.equals("y")) {
-                        } else if (preciousChoice2.equals("n")) {
+                        preciousChoiceYN = in.next();
+                        if (preciousChoiceYN.equals("y")) {
+                        } else if (preciousChoiceYN.equals("n")) {
                             System.out.println("Did you already see all the stupid stuff I did K than bye later");
                             break;
-                        } else if (preciousChoice2.equals("tiger")) {
-                            System.out.println("Average tiger height is 80-110");
-                            result = yourHeight / 0.95;
-                            System.out.println("So I guess you are about " + String.format("%.2f", result) + " little puffy cats tall");
-                            System.out.println("Do you wanna continue having fun: ");
-                            preciousChoice2 = in.next();
-                            if (preciousChoice2.equals("y")) {
-
-                            } else if (preciousChoice2.equals("n")) {
-                                System.out.println("Did you already see all the stupid stuff I did K than bye later");
-                                break;
-                            }
                         }
+                    } else if (preciousChoice2.equals("tiger")) {
+                        System.out.println("Average tiger height is 80-110");
+                        result = yourHeight / 0.95;
+                        System.out.println("So I guess you are about " + String.format("%.2f", result) + " great striped cats tall");
+                        System.out.println("Do you wanna continue having fun: ");
+                        preciousChoiceYN = in.next();
+                        if (preciousChoiceYN.equals("y")) {
+
+                        } else if (preciousChoiceYN.equals("n")) {
+                            System.out.println("Did you already see all the stupid stuff I did K than bye later");
+                            break;
+                        }
+                    } else if (preciousChoice2.equals("LEO")) {
+                        result=yourHeight/1.77;
+                        System.out.println("You found my secret menu,good job.\nWell I'm 1.77(above average) witch means I am 12sm higher than you :D\nThat makes you "+ String.format("%.2f", result) +" fun guys tall.\nThat means you are SHORT :D and yet you are very ELEGANT and BEAUTIFUL.\nI guess that works for your daily beauty confirmation <3\nHope you had fun. ");
+break;
                     }
+
                 } else if (yetAnotherPreciousChoice == 2) {
                     System.out.println("choose 1 of those:\n1:Marbled cat\n2:Snow leopard");
                     preciousChoice = in.nextInt();
@@ -85,9 +89,9 @@ public class Main {
                         result = yourHeight / 0.3;
                         System.out.println("So I guess you are about " + String.format("%.2f", result) + " little cute cats tall");
                         System.out.println("Do you wanna continue having fun: ");
-                        preciousChoice2 = in.next();
-                        if (preciousChoice2.equals("y")) {
-                        } else if (preciousChoice2.equals("n")) {
+                        preciousChoiceYN = in.next();
+                        if (preciousChoiceYN.equals("y")) {
+                        } else if (preciousChoiceYN.equals("n")) {
                             System.out.println("Did you already see all the stupid stuff I did K than bye later");
                             break;
                         }
@@ -97,9 +101,9 @@ public class Main {
                         result = yourHeight / 0.6;
                         System.out.println("So I guess you are about " + String.format("%.2f", result) + " cold cats tall");
                         System.out.println("Do you wanna continue having fun: ");
-                        preciousChoice2 = in.next();
-                        if (preciousChoice2.equals("y")) {
-                        } else if (preciousChoice2.equals("n")) {
+                        preciousChoiceYN = in.next();
+                        if (preciousChoiceYN.equals("y")) {
+                        } else if (preciousChoiceYN.equals("n")) {
                             System.out.println("Did you already see all the stupid stuff I did K than bye later");
                             break;
                         }
@@ -129,48 +133,52 @@ public class Main {
                     case 1:
                         System.out.print("Are you sure you want to exit: ");
 
-                        preciousChoice2 = in.next();
-                        if (preciousChoice2.equals("y")) {
+                        preciousChoiceYN = in.next();
+                        if (preciousChoiceYN.equals("y")) {
                             continue;
-                        } else if (preciousChoice2.equals("n")) {
+                        } else if (preciousChoiceYN.equals("n")) {
                             System.out.print("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit ");
                             preciousChoice = in.nextInt();
 
-                }continue;
+                        }
+                        continue;
 
                     case 2:
                         System.out.print("I will be fun and tell you, you should continue...or may by you cant be bothered anymore ?: ");
 
-                        preciousChoice2 = in.next();
-                        if (preciousChoice2.equals("y")) {
+                        preciousChoiceYN = in.next();
+                        if (preciousChoiceYN.equals("y")) {
                             continue;
-                        } else if (preciousChoice2.equals("n")) {
+                        } else if (preciousChoiceYN.equals("n")) {
                             System.out.print("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit ");
                             preciousChoice = in.nextInt();
 
-                        }continue;
+                        }
+                        continue;
                     case 3:
                         System.out.print("please don't exit Im sure there is something you are missing...got to go?: ");
 
-                        preciousChoice2 = in.next();
-                        if (preciousChoice2.equals("y")) {
+                        preciousChoiceYN = in.next();
+                        if (preciousChoiceYN.equals("y")) {
                             continue;
-                        } else if (preciousChoice2.equals("n")) {
+                        } else if (preciousChoiceYN.equals("n")) {
                             System.out.print("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit ");
                             preciousChoice = in.nextInt();
 
-                        }continue;
+                        }
+                        continue;
                     case 4:
                         System.out.print("You are definitely a LEO you can't be reasoned with(may be I left a hint around here)...still want to leave: ");
 
-                        preciousChoice2 = in.next();
-                        if (preciousChoice2.equals("y")) {
+                        preciousChoiceYN = in.next();
+                        if (preciousChoiceYN.equals("y")) {
                             continue;
-                        } else if (preciousChoice2.equals("n")) {
+                        } else if (preciousChoiceYN.equals("n")) {
                             System.out.print("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit ");
                             preciousChoice = in.nextInt();
 
-                        }continue;
+                        }
+                        continue;
                     case 5:
                         System.out.print("OK OK I guess you are done, hope you had fun");
                         break;
