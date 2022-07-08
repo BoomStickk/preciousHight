@@ -23,12 +23,12 @@ public class Main {
                 if (preciousChoice3 == 1) {
                     System.out.println("Average domestic height is about 25sm");
                     result = yourHeight / 0.25;
-                    System.out.println("So I guess you are about " + String.format("%.2f", result) + " little puffy cats tall");
+                    System.out.println("So I guess you are about " + String.format("%.2f", result) + " little puffy cats tall\n Not much at all :D , but cute enough i'd sey. ");
                     enterToContinue();
                 } else if (preciousChoice3 == 2) {
                     System.out.println("Average Puma height is 60-75");
                     result = yourHeight / 0.675;
-                    System.out.println("So I guess you are about " + String.format("%.2f", result) + " scary pumas tall");
+                    System.out.println("So I guess you are about " + String.format("%.2f", result) + " scary pumas tall\nAlthough you can't scare me...no you can't I am pretty sure about that...I think\n ok GO GO");
                     enterToContinue();
                 } else if (preciousChoice3 == 3) {
                     preciousChoice = getPreciousChoice("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit\n ", in);
@@ -45,7 +45,7 @@ public class Main {
                         case "lion" -> {
                             System.out.println("Average lion height is 90-110");
                             result = yourHeight;
-                            System.out.println("So I guess you are about " + String.format("%.2f", result) + " big hungry cats tall");
+                            System.out.println("So I guess you are about " + String.format("%.2f", result) + " big hungry cats tall\nIf they eat as much as you they might die of THIRST :D\nTrying to be funny hope it works.");
                             enterToContinue();
                             preciousChoice = getPreciousChoice("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit\n ", in);
                             continue;
@@ -53,7 +53,7 @@ public class Main {
                         case "tiger" -> {
                             System.out.println("Average tiger height is 80-110");
                             result = yourHeight / 0.95;
-                            System.out.println("So I guess you are about " + String.format("%.2f", result) + " great striped cats tall");
+                            System.out.println("So I guess you are about " + String.format("%.2f", result) + " great striped cats tall\nI guess the stripes are for camo but you can't really hide with those eyes.");
                             enterToContinue();
                             preciousChoice = getPreciousChoice("FAMILY FELIDAE(This mean cats I guess): \nChoose subfamily: \n1:Subfamily Felinae\n2:Subfamily Pantherinae\n3:Help\n4:Exit\n ", in);
                             continue;
@@ -75,13 +75,13 @@ public class Main {
                     if (preciousChoice == 1) {
                         System.out.println("Average marbled cat height is 30");
                         result = yourHeight / 0.3;
-                        System.out.println("So I guess you are about " + String.format("%.2f", result) + " little cute cats tall");
+                        System.out.println("So I guess you are about " + String.format("%.2f", result) + " little cute cats tall\nWell bit bigger than the domestic ones, but a bit wilder too, like someone I know");
                         enterToContinue();
 
                     } else if (preciousChoice == 2) {
                         System.out.println("Average snow leopard height is 60");
                         result = yourHeight / 0.6;
-                        System.out.println("So I guess you are about " + String.format("%.2f", result) + " cold cats tall");
+                        System.out.println("So I guess you are about " + String.format("%.2f", result) + " cold cats tall\nWith so little body fat you must get cold during the winter months\nYou definitely need something or someone to keep you warm :D");
                         enterToContinue();
                     }
                 } else if (yetAnotherPreciousChoice == 3) {
@@ -187,10 +187,7 @@ public class Main {
     }
 
     private static int getPreciousChoice(String s, Scanner in) {
-
         System.out.print(s);
-
-        System.out.println("\n==========================================================================================");
         validateInput(in, "[1234]", "Who do you think I am(1234): ");
         return in.nextInt();
     }
