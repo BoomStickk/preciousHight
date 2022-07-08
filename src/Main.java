@@ -77,9 +77,11 @@ public class Main {
                         }
                     } else if (preciousChoice2.equals("LEO")) {
                         result=yourHeight/1.77;
-                        System.out.println("You found my secret menu,good job.\nWell I'm 1.77(above average) witch means I am 12sm higher than you :D\nThat makes you "+ String.format("%.2f", result) +" fun guys tall.\nThat means you are SHORT :D and yet you are very ELEGANT and BEAUTIFUL.\nI guess that works for your daily beauty confirmation <3\nHope you had fun. ");
-break;
-                    }
+                        System.out.println("You found my secret menu,good job.");
+                        System.out.println("   |\\---/|\n   | ,_, |\n    \\_`_/-..----.\n ___/ `   ' ,\"\"+ \\ \n(__...'   __\\    |`.___.';\n  (_,...'(_,.`__)/'.....+");
+                        System.out.println("Well I'm 1.77(above average) witch means I am 12sm higher than you :D\nThat makes you "+ String.format("%.2f", result) +" fun guys tall.\nThat means you are SHORT :D and yet you are very ELEGANT and BEAUTIFUL.\nI guess that works for your daily beauty confirmation <3\nHope you had fun. ");
+
+                    }break;
 
                 } else if (yetAnotherPreciousChoice == 2) {
                     System.out.println("choose 1 of those:\n1:Marbled cat\n2:Snow leopard");
